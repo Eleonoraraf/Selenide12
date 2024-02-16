@@ -10,17 +10,22 @@ compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
 
 repositories {
-    mavenCentral()
-}
-tasks.withType(JavaCompile) {
-    options.compilerArgs << "--add-exports=jdk.internal.vm.compiler/org.graalvm.compiler.nodeinfo=ALL-UNNAMED"
+    mavenCentral() // Maven Central repository
+    jcenter()      // JCenter repository
+
+    // You can add more repositories if needed
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-    testImplementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    // Your dependencies here
+
     testImplementation 'com.codeborne:selenide:5.23.3'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    testImplementation 'org.testng:testng:7.3.0'
+    testImplementation 'io.github.bonigarcia:webdrivermanager:4.4.3'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    implementation 'com.google.guava:guava:30.1.1-jre'
+
 }
 
 test {
