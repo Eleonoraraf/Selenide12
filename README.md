@@ -1,0 +1,1 @@
+[![Build Status](https://github.com/ваш-пользователь/ваш-репозиторий/workflows/Gradle/badge.svg)](https://github.com/Eleonoraraf/Selenide2/actions)
